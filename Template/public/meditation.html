@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Méditation | ADHD Care Services</title>
+    <title>ADHD Care Services</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600&family=Inter:wght@400;600&family=Syne:wght@400;500&display=swap" rel="stylesheet">
     <script>
@@ -14,162 +14,28 @@
                         'lexend': ['Lexend', 'sans-serif'],
                         'inter': ['Inter', 'sans-serif'],
                         'syne': ['Syne', 'sans-serif']
+                    },
+                    colors: {
+                        primary: '#3C90D2',
+                        primaryDark: '#1B75BC',
+                        secondary: '#007bff',
+                        secondaryDark: '#0056b3',
+                        light: '#f8f9fa',
+                        testimonialBg: '#e3edf9',
+                        starColor: '#f5c518'
                     }
                 }
             }
         }
     </script>
-    <style>
-        /* Custom styles for meditation page */
-        .video-card {
-            background-color: white;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            margin-bottom: 2rem;
-        }
-        
-        .video-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
-        }
-        
-        .video-thumbnail {
-            position: relative;
-            width: 100%;
-        }
-        
-        .video-thumbnail img {
-            width: 100%;
-            height: auto;
-            min-height: 300px;
-            object-fit: cover;
-        }
-        
-        .play-button-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: rgba(0, 0, 0, 0.2);
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-        
-        .video-thumbnail:hover .play-button-overlay {
-            opacity: 1;
-        }
-        
-        .play-btn {
-            width: 80px;
-            height: 80px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #3C90D2;
-            background-color: white;
-            border-radius: 50%;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-            transition: transform 0.2s ease;
-        }
-        
-        .play-btn:hover {
-            transform: scale(1.1);
-        }
-        
-        .tab-btn {
-            position: relative;
-        }
-        
-        .tab-btn.active {
-            color: #3C90D2;
-        }
-        
-        .tab-btn.active::after {
-            content: '';
-            position: absolute;
-            bottom: -1px;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            background-color: #3C90D2;
-        }
-        
-        .pagination-dots {
-            display: flex;
-            justify-content: center;
-            gap: 0.75rem;
-            margin-top: 1.5rem;
-        }
-        
-        .pagination-dot {
-            width: 16px;
-            height: 16px;
-            border-radius: 50%;
-            background-color: #ccc;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-        
-        .pagination-dot.active {
-            background-color: #3C90D2;
-        }
-        
-        .video-page {
-            display: none;
-        }
-        
-        .video-page.active {
-            display: block;
-        }
-        
-        /* Category tag style */
-        .video-category-tag {
-            display: inline-block;
-            margin-right: 8px;
-            margin-bottom: 8px;
-            padding: 4px 10px;
-            border-radius: 12px;
-            font-size: 0.75rem;
-            font-weight: 500;
-        }
-        
-        /* Modal styles */
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-            z-index: 1000;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .modal-content {
-            background-color: white;
-            padding: 2rem;
-            border-radius: 8px;
-            max-width: 400px;
-            width: 90%;
-            text-align: center;
-        }
-    </style>
 </head>
-<body class="m-0 p-0 bg-gray-100">
+<body class="font-sans bg-light m-0 p-0">
     <!-- Navigation Container -->
-    <div class="w-full bg-gradient-to-r from-[#3C90D2] to-[#1B75BC] px-4 py-4 md:px-10 md:h-[107px]">
+    <div class="w-full bg-gradient-to-r from-[#1B75BC] to-[#1B75BC] px-4 py-4 md:px-10 md:h-[107px]">
         <div class="flex flex-col md:flex-row md:items-center md:justify-between">
             <!-- Logo Section -->
             <div class="flex items-center justify-between">
-                <img src="../logo.png" alt="Logo" class="h-8 md:h-10 transition-transform duration-300 transform hover:scale-110">
+                <img src="..\logo.png" alt="Logo" class="h-8 md:h-10 transition-transform duration-300 transform hover:scale-110">
                 <!-- Mobile menu button -->
                 <button id="mobileMenuBtn" class="md:hidden text-white">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -181,11 +47,10 @@
             <!-- Navbar Links and Right Section -->
             <div id="navContent" class="hidden md:flex flex-col md:flex-row md:items-center mt-4 md:mt-0">
                 <nav class="flex flex-col md:flex-row md:justify-center space-y-2 md:space-y-0 md:space-x-5 text-white text-[16px] font-lexend mb-4 md:mb-0 w-full">
-                    <a href="home.html" class="hover:underline">Home</a>
+                    <a href="index.html" class="hover:underline">Home</a>
                     <a href="about-us.html" class="hover:underline">About Us</a>
                     <a href="contact.html" class="hover:underline">Contact Us</a>
-                    <a href="tasks.html" class="hover:underline">Tasks</a>
-                    <a href="meditation.html" class="hover:underline font-bold">Meditation</a>
+                    <a href="meditation.html" class="hover:underline">Meditation</a>
                     <a href="services.html" class="hover:underline">Services</a>
                     <a href="faq.html" class="hover:underline">FAQ</a>
                     <a href="mood.html" class="hover:underline">Mood</a>
@@ -210,238 +75,6 @@
                         <div onclick="changeLanguage('en', 'https://flagcdn.com/w40/gb.png')" class="flex items-center px-3 py-2 cursor-pointer hover:bg-gray-100">
                             <img src="https://flagcdn.com/w40/gb.png" alt="English" class="w-5 h-4 mr-2"> English
                         </div>
-
-                <!-- Pages Links Section -->
-                <div class="flex flex-col gap-3 md:gap-5">
-                    <h3 class="text-white text-[20px] md:text-[24px] font-lexend font-normal text-center md:text-left">Pages</h3>
-                    <nav class="flex flex-col gap-2 md:gap-3">
-                        <a href="home.html" class="text-white text-[18px] font-lexend no-underline hover:underline text-center md:text-left">Home</a>
-                        <a href="about-us.html" class="text-white text-[18px] font-lexend no-underline hover:underline text-center md:text-left">About us</a>
-                        <a href="tasks.html" class="text-white text-[18px] font-lexend no-underline hover:underline text-center md:text-left">Tasks</a>
-                        <a href="meditation.html" class="text-white text-[18px] font-lexend no-underline hover:underline text-center md:text-left font-bold">Meditation</a>
-                        <a href="services.html" class="text-white text-[18px] font-lexend no-underline hover:underline text-center md:text-left">Services</a>
-                        <a href="faq.html" class="text-white text-[18px] font-lexend no-underline hover:underline text-center md:text-left">FAQ</a>
-                    </nav>
-                </div>
-
-                <!-- Contact Info Section -->
-                <div class="flex flex-col items-center md:items-end gap-3 md:gap-5 text-center md:text-right">
-                    <div class="text-white text-[16px] md:text-[18px] font-syne">25 Rue Habib Bourguiba - Ghazela Ariana TUNIS</div>
-                    <div class="text-white text-[24px] md:text-[30px] font-syne">55 001 001</div>
-                    <div class="text-white text-[16px] md:text-[18px] font-syne">Focusaid@esprit.tn</div>
-                </div>
-            </div>
-
-            <!-- Divider -->
-            <hr class="border-t border-white opacity-15 mb-4 md:mb-5">
-
-            <!-- Footer Bottom Text -->
-            <div class="text-center text-white text-[14px] md:text-[16px] font-syne">
-                Privacy Policy - Esprit © 2025 - All Rights Reserved
-            </div>
-        </div>
-    </footer>
-
-    <!-- Success Modal for Submission -->
-    <div id="submit-success-modal" class="modal">
-        <div class="modal-content">
-            <svg class="w-16 h-16 text-green-500 mx-auto mb-4" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                <polyline points="22 4 12 14.01 9 11.01"></polyline>
-            </svg>
-            <h3 class="text-xl font-bold mb-2 font-lexend">Submitted Successfully!</h3>
-            <p class="text-gray-600 mb-6 font-inter">Your meditation tutorial has been submitted and is being reviewed.</p>
-            <button onclick="closeModal('submit-success-modal')" class="bg-[#3C90D2] text-white hover:bg-[#1B75BC] font-medium py-2 px-6 rounded-full cursor-pointer transition font-inter">
-                OK
-            </button>
-        </div>
-    </div>
-    
-    <!-- Success Modal for Upload -->
-    <div id="upload-success-modal" class="modal">
-        <div class="modal-content">
-            <svg class="w-16 h-16 text-green-500 mx-auto mb-4" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                <polyline points="22 4 12 14.01 9 11.01"></polyline>
-            </svg>
-            <h3 class="text-xl font-bold mb-2 font-lexend">Upload Successful!</h3>
-            <p class="text-gray-600 mb-6 font-inter">Your video has been uploaded successfully.</p>
-            <button onclick="closeModal('upload-success-modal')" class="bg-[#3C90D2] text-white hover:bg-[#1B75BC] font-medium py-2 px-6 rounded-full cursor-pointer transition font-inter">
-                OK
-            </button>
-        </div>
-    </div>
-
-    <!-- JavaScript for functionality -->
-    <script>
-        // Mobile menu functionality
-        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-        const navContent = document.getElementById('navContent');
-
-        mobileMenuBtn.addEventListener('click', function() {
-            navContent.classList.toggle('hidden');
-        });
-
-        // Language selector functionality
-        function toggleLanguageMenu(event) {
-            event.stopPropagation();
-            const menu = document.getElementById("languageMenu");
-            menu.classList.toggle("hidden");
-        }
-
-        function changeLanguage(lang, flagUrl) {
-            document.getElementById("selectedFlag").src = flagUrl;
-            document.getElementById("languageMenu").classList.add("hidden");
-        }
-
-        document.addEventListener("click", function(event) {
-            const menu = document.getElementById("languageMenu");
-            const selector = document.getElementById("languageSelector");
-            if (!selector.contains(event.target)) {
-                menu.classList.add("hidden");
-            }
-        });
-        
-        // Ensure nav menu is visible on larger screens
-        window.addEventListener('resize', function() {
-            if (window.innerWidth >= 768) {
-                navContent.classList.remove('hidden');
-            } else {
-                navContent.classList.add('hidden');
-            }
-        });
-        
-        // Tab functionality
-        function setActiveTab(button) {
-            const tabs = document.querySelectorAll('.tab-btn');
-            tabs.forEach(tab => {
-                tab.classList.remove('active');
-                tab.style.color = '#4B5563'; // gray-600
-            });
-            button.classList.add('active');
-            button.style.color = '#3C90D2'; // primary blue
-        }
-        
-        // Page navigation function
-        function changePage(pageNumber) {
-            // Hide all pages
-            const pages = document.querySelectorAll('.video-page');
-            pages.forEach(page => {
-                page.classList.remove('active');
-                page.classList.add('hidden');
-            });
-            
-            // Show the selected page
-            const selectedPage = document.getElementById('video-page-' + pageNumber);
-            if (selectedPage) {
-                selectedPage.classList.remove('hidden');
-                selectedPage.classList.add('active');
-            }
-            
-            // Update pagination dots
-            const dots = document.querySelectorAll('.pagination-dot');
-            dots.forEach((dot, index) => {
-                if (index + 1 === pageNumber) {
-                    dot.classList.add('active');
-                } else {
-                    dot.classList.remove('active');
-                }
-            });
-        }
-        
-        // Video filtering functionality - FIXED version
-        function filterVideos(category, event) {
-            // Update active button style
-            const buttons = document.querySelectorAll('.category-btn');
-            buttons.forEach(btn => {
-                btn.classList.remove('active');
-                btn.classList.remove('bg-[#1e88e5]');
-                btn.classList.remove('text-white');
-                btn.classList.add('bg-white');
-                btn.classList.add('text-gray-700');
-            });
-            
-            // Set active button style
-            if (event && event.target) {
-                event.target.classList.add('active');
-                event.target.classList.add('bg-[#1e88e5]');
-                event.target.classList.add('text-white');
-                event.target.classList.remove('bg-white');
-                event.target.classList.remove('text-gray-700');
-            }
-            
-            // Show first page when changing categories
-            changePage(1);
-            
-            // Filter videos based on category
-            const videos = document.querySelectorAll('.video-card');
-            
-            videos.forEach(video => {
-                const videoCategories = video.getAttribute('data-category');
-                
-                if (category === 'all') {
-                    video.style.display = '';
-                } else if (videoCategories.includes(category)) {
-                    video.style.display = '';
-                } else {
-                    video.style.display = 'none';
-                }
-            });
-        }
-        
-        // File upload handling
-        function handleFileUpload(input) {
-            const fileName = input.files.length > 0 ? input.files[0].name : 'No file selected';
-            document.getElementById('file-name').textContent = fileName;
-        }
-        
-        // Description functions - separated for clarity
-        function showDescriptionInput() {
-            // Show the textarea and hide the WRITE button
-            document.getElementById('description-input-container').style.display = 'block';
-            document.getElementById('description-btn-container').style.display = 'none';
-        }
-        
-        function saveDescription() {
-            const text = document.getElementById('description-text').value;
-            if (text.trim() !== '') {
-                // Display the entered text in preview
-                const preview = document.getElementById('description-preview');
-                preview.textContent = text;
-                preview.style.display = 'block';
-                
-                // Hide the input container
-                document.getElementById('description-input-container').style.display = 'none';
-                
-                // Show the EDIT button
-                const btnContainer = document.getElementById('description-btn-container');
-                btnContainer.style.display = 'flex';
-                btnContainer.querySelector('button').textContent = 'EDIT';
-            }
-        }
-        
-        // Modal functions
-        function showSubmitSuccessModal() {
-            document.getElementById('submit-success-modal').style.display = 'flex';
-        }
-        
-        function showUploadSuccessModal() {
-            document.getElementById('upload-success-modal').style.display = 'flex';
-        }
-        
-        function closeModal(modalId) {
-            document.getElementById(modalId).style.display = 'none';
-        }
-        
-        // Close modals when clicking outside
-        window.addEventListener('click', function(event) {
-            if (event.target.classList.contains('modal')) {
-                event.target.style.display = 'none';
-            }
-        });
-    </script>
-</body>
-</html>
                         <div onclick="changeLanguage('fr', 'https://flagcdn.com/w40/fr.png')" class="flex items-center px-3 py-2 cursor-pointer hover:bg-gray-100">
                             <img src="https://flagcdn.com/w40/fr.png" alt="Français" class="w-5 h-4 mr-2"> Français
                         </div>
@@ -462,8 +95,10 @@
 
      <!-- Main Content -->
      <main>
+
+
         <!-- Hero Section with FAQ-style Blue Background using exact color -->
-        <section class="bg-[#3C90D2] text-white py-12 px-4">
+        <section class="bg-[#1B75BC] text-white py-12 px-4">
             <div class="container mx-auto text-center">
                 <h1 class="text-4xl md:text-5xl font-bold mb-6 font-lexend">Meditation</h1>
                 <p class="max-w-2xl mx-auto text-blue-100 font-inter">
