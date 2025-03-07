@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FocusAid</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <style>
+        .bg-custom {
+            background-image: url('bg-hero.jpg'); 
+            background-size: cover;
+            background-position: center;
+        }
+        .swiper-button-next, .swiper-button-prev {
+            color: #3B82F6;
+        }
+        #id {
+            height: 280px;
+        }
+        #img {
+            height: auto;
+            width: 100%;
+        }
+        .bg-custom-2 {
+            background-color: #1B75BC;
+        }
+    </style>
+</head>
+<body class="h-screen">
+
+<header class="bg-custom-2 text-white p-5">
+    <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+        <img src="image 25.png" alt="FocusAid Logo" class="h-20 mb-4 mr-8 md:mb-0"> <!-- Replace with your logo path -->
+        <nav class="flex-grow">
+            <ul class="flex flex-col md:flex-row space-x-0 md:space-x-12 justify-center md:justify-start">
+                <li><a href="#" class="hover:underline font-semibold">Home</a></li>
+                <li><a href="AboutUs.html" class="hover:underline font-semibold">About Us</a></li>
+                <li><a href="./public/contact.html" class="hover:underline font-semibold">Contact Us</a></li>
+                <li><a href="./public/meditation.html" class="hover:underline font-semibold">Mediation</a></li>
+                <li><a href="./public/services.html" class="hover:underline font-semibold">Services</a></li>
+                <li><a href="./public/FAQ.html" class="hover:underline font-semibold">FAQ</a></li>
+                <li> <a href="./public/mood.html" class="hover:underline">Mood</a></li>
+                <li><a href="./public/profile.html" class="hover:underline">Profile</a></li>
+            </ul>
+        </nav>
+        <div class="flex space-x-2 mt-4 md:mt-0"> <!-- Right-aligned items -->
+            <a href="/public/signup.html" class="border border-white text-white bg-transparent px-8 py-2 rounded-full hover:bg-white hover:text-blue-500">Sign Up</a>
+            <a href="/public/signin.html" class="bg-white text-gray-800 font-semibold px-8 py-2 rounded-full">Login</a>
+            <img src="flag.png" alt="Language" class="h-8 mt-1 rounded-full"> <!-- Replace with your language icon path -->
+        </div>
+    </div>
+</header>
+
+<main class="bg-custom-2 py-16 px-4 md:px-24 flex justify-center items-center w-full" id="hero">
+    <div class="flex flex-col text-white py-16 px-4 md:px-64 max-w-12xl text-center">
+        <h2 class="text-4xl md:text-7xl font-bold mb-4">Learn more about us</h2>
+        <p class="text-lg md:text-xl mb-8">
+            Take a few moments to discover the team behind this exciting project!
+        </p>
+    </div>
+</main>
+
+<div class="container mx-auto px-4 md:px-16 py-16 flex flex-col md:flex-row items-center">
+    <div class="w-full md:w-1/2 mb-8 md:mb-0">
+        <img src="depositphotos_625219306-stock-photo-teamwork-hands-together-team-building.png" alt="Teamwork" class="h-auto max-h-120 mx-auto"> <!-- Responsive image -->
+    </div>
+    <div class="w-full md:w-1/2 pr-0 md:pr-8">
+        <h2 class="text-2xl font-bold text-gray-400 mb-4">Who we are</h2>
+        <p class="text-3xl text-gray-600 mb-32 mt-4">
+            We are a team of passionate professionals, committed to providing resources and solutions tailored to the needs of individuals with ADHD. Our approach is based on understanding, active listening, and the development of practical tools to make daily life easier.
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 mb-32 gap-6">
+            <ul class="list-disc list-inside">
+                <li class="flex text-2xl items-center text-gray-600 mb-2">
+                    <i class="fas text-custom-green fa-eye mr-2"></i>
+                    Personalized Support
+                </li>
+                <li class="flex text-2xl items-center text-gray-600 mb-2">
+                    <i class="fas text-custom-green fa-cube mr-2"></i>
+                    Practical and Effective Tools 
+                </li>
+                <li class="flex text-2xl items-center text-gray-600 mb-2">
+                    <i class="fas text-custom-green fa-paint-brush mr-2"></i>
+                    Everyday Life Advice 
+                </li>
+            </ul>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+            <div class="p-4 text-center">
+                <span class="block text-4xl font-extrabold text-custom-green">15+</span>
+                <p class="mt-2 text-lg font-bold uppercase text-custom-green">EXPÉRIENCE</p>
+            </div>
+            <div class="p-4 text-center">
+                <span class="block text-4xl font-extrabold text-custom-green">25+</span>
+                <p class="mt-2 text-lg font-bold uppercase text-custom-green">BEST TEAM</p>
+            </div>
+            <div class="p-4 text-center">
+                <span class="block text-4xl font-extrabold text-custom-green">500+</span>
+                <p class="mt-2 text-lg font-bold uppercase text-custom-green">Total Client</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container mx-auto">
+    <h2 class="text-3xl font-bold text-left mb-8">We Work With Team</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
+        <div class="bg-white shadow-lg rounded-lg p-6 text-center">
+            <img src="475805249_1122297702507658_4016694188612878593_n.png" alt="Sahar Gaieche" class="w-full h-60 object-cover rounded-t-lg">
+            <h3 class="text-xl font-semibold mt-4">Founder</h3>
+            <p class="text-gray-700">Sahar Gaieche</p>
+            <div class="flex justify-center mt-4">
+                <a href="#" class="text-blue-600 mx-2"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="text-blue-600 mx-2"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+        <div class="bg-white shadow-lg rounded-lg p-6 text-center">
+            <img src="21d3b629-04b7-442d-901d-54aebb162dda.jpeg" alt="Oumaima Hajji" class="w-full h-60 object-cover rounded-t-lg">
+            <h3 class="text-xl font-semibold mt-4">Consultant</h3>
+            <p class="text-gray-700">Oumaima Hajji</p>
+            <div class="flex justify-center mt-4">
+                <a href="#" class="text-blue-600 mx-2"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="text-blue-600 mx-2"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+        <div class="bg-white shadow-lg rounded-lg p-6 text-center">
+            <img src="8dc8798f-d15e-465f-872e-6cd2c7d7af92.jpeg" alt="Montaha Bettaieb" class="w-full h-60 object-cover rounded-t-lg">
+            <h3 class="text-xl font-semibold mt-4">Content Manager</h3>
+            <p class="text-gray-700">Montaha Bettaieb</p>
+            <div class="flex justify-center mt-4">
+                <a href="#" class="text-blue-600 mx-2"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="text-blue-600 mx-2"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+        <div class="bg-white shadow-lg rounded-lg p-6 text-center">
+            <img src="7e8a2998-1be5-4b77-89cc-52593a094e1f.jpeg" alt="Sarah Henia" class="w-full h-60 object-cover rounded-t-lg">
+            <h3 class="text-xl font-semibold mt-4">Web Developer</h3>
+            <p class="text-gray-700">Sarah Henia</p>
+            <div class="flex justify-center mt-4">
+                <a href="#" class="text-blue-600 mx-2"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="text-blue-600 mx-2"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+        <div class="bg-white shadow-lg rounded-lg p-6 text-center">
+            <img src="c3fdf161-7af3-48e9-9252-bb0406d34f1b.jpeg" alt="Maram Naderi" class="w-full h-60 object-cover rounded-t-lg">
+            <h3 class="text-xl font-semibold mt-4">Community Manager</h3>
+            <p class="text-gray-700">Maram Naderi</p>
+            <div class="flex justify-center mt-4">
+                <a href="#" class="text-blue-600 mx-2"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="text-blue-600 mx-2"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<main class="max-w-26xl mt-10">
+    <section class="bg-custom-2 text-white p-6 flex items-start flex-col md:flex-row">
+        <div class="flex flex-col space-y-4 ml-0 md:ml-24">
+            <div class="bg-white h-44 p-4 shadow-md mx-auto mb-8 w-64">
+                <div class="flex items-center space-x-2">
+                    <span class="text-blue-800 text-2xl">
+                        <i class="fas mb-8 text-5xl fa-phone-alt"></i>
+                    </span>
+                </div>
+                <span class="text-2xl text-gray-600 font-extrabold">Call us now</span>
+                <span class="block mt-2 text-gray-800">(+32) 123 456 789</span>
+            </div>
+        </div>
+        <blockquote class="ml-0 md:ml-10 text-3xl md:font-bold mt-4 md:mt-24 flex items-center uppercase">
+            "Every person is unique, <br> and we are here to support you”
+        </blockquote>
+    </section>
+</main>
+<br>
+
+<div class="container mx-auto">
+    <div class="flex flex-col md:flex-row items-center bg-white p-6">
+        <div class="flex-1 mr-8 mt-6 md:mt-0 relative">
+            <img src="Capture d’écran 2025-02-05 153136.png" alt="Video Thumbnail" class="rounded-lg  mr-8 w-full h-auto">
+            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                <button class="bg-gray-800 text-white rounded-full p-3">
+                    <i class="fas fa-play text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        <div class="flex-1 mt-6 md:mt-0">
+            <h2 class="text-4xl font-bold text-center mb-4">Why choose our ADHD support platform?</h2>
+            <p class="text-gray-700 mb-6">
+                Whether you want to better understand ADHD or find practical tools, we are here to guide you every step of the way.
+            </p>
+            <ul class="list-none space-y-2">
+                <li class="text-gray-600"><i class="fas fa-check-circle text-green-500 mr-2"></i>Personalized Advice</li>
+                <li class="text-gray-600"><i class="fas fa-check-circle text-green-500 mr-2"></i>Tools to Better Organize Your Daily Life</li>
+                <li class="text-gray-600"><i class="fas fa-check-circle text-green-500 mr-2"></i>Personalized Support and Listening</li>
+                <li class="text-gray-600"><i class="fas fa-check-circle text-green-500 mr-2"></i>Resources Approved by Professionals</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<footer class="bg-custom-2 text-white py-10">
+    <div class="max-w-6xl mx-auto px-4 text-center mb-8">
+        <h2 class="text-5xl font-semibold mb-4">Let’s relax and follow our hearts!</h2>
+        <br>
+        <div class="mb-6">
+            <a href="/public/contact.html" class="bg-white text-blue-600 px-4 py-2 rounded-full">Contact Us   →</a>
+        </div>
+    </div>
+
+    <br>
+    <div class="max-w-6xl mx-auto px-4">
+        <div class="flex flex-col md:flex-row justify-between mb-6">
+            <div class="flex flex-col items-center">
+                <img src="image 25.png" alt="Logo" class="mb-3">
+                <br>
+                <br>
+                <div class="flex space-x-4">
+                    <a href="https://x.com/" class="hover:underline">
+                        <img src="twitter.png" alt="Twitter" class="w-6 h-6">
+                    </a>
+                    <a href="https://www.linkedin.com/feed/" class="hover:underline">
+                        <img src="linkedin.png" alt="LinkedIn" class="w-6 h-6">
+                    </a>
+                    <a href="https://www.facebook.com/" class="hover:underline">
+                        <img src="facebook.png" alt="Facebook" class="w-6 h-6">
+                    </a>
+                </div>
+            </div>
+
+            <div class="mt-4 md:mt-0">
+                <h3 class="font-semibold">Pages</h3>
+                <ul class="mt-2">
+                    <li><a href="#" class="hover:underline font-semibold">Home</a></li>
+                <li><a href="AboutUs.html" class="hover:underline font-semibold">About Us</a></li>
+                <li><a href="./public/contact.html" class="hover:underline font-semibold">Contact Us</a></li>
+                <li><a href="./public/meditation.html" class="hover:underline font-semibold">Mediation</a></li>
+                <li><a href="./public/services.html" class="hover:underline font-semibold">Services</a></li>
+                <li><a href="./public/FAQ.html" class="hover:underline font-semibold">FAQ</a></li>
+                <li> <a href="./public/mood.html" class="hover:underline">Mood</a></li>
+                <li><a href="./public/profile.html" class="hover:underline">Profile</a></li>
+
+                </ul>
+            </div>
+
+            <div class="mt-4 md:mt-0">
+                <p class="mt-2">25 Rue Habbib Bourguiba - Ghazela Ariana TUNIS</p>
+                <p class="mt-2">56 001 001</p>
+                <p class="mt-2">Focusaid@respint.tn</p>
+            </div>
+        </div>
+
+        <hr>
+        <div class="text-center mt-10">
+            <p class="text-sm">Privacy Policy - &copy; 2025 All Rights Reserved</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
